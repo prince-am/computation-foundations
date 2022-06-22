@@ -29,7 +29,7 @@ layout: default
                         <strong>Contact:</strong> {{ p.contact }} <br>
                         <strong>Location:</strong> {{ p.location }}
                     </p>
-                    <a href="#" class="btn btn-primary">Call {{p.owner}} to Rent!</a>
+                     <a href="#" class="btn btn-primary">{% if p.contact contains '@' %}Email{% else %}Call{% endif %} {{p.owner}} to Rent!</a>
                 </div>
             </div>
         </div>
